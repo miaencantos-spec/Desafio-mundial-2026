@@ -1,9 +1,11 @@
 import Link from "next/link";
-import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import {
   Card,
   CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
 } from "@/components/ui/card";
 import {
   Accordion,
@@ -13,305 +15,304 @@ import {
 } from "@/components/ui/accordion";
 import { 
   Trophy, 
-  Users, 
   Zap, 
-  CheckCircle, 
-  ShieldCheck, 
+  Globe, 
+  Lock, 
+  BarChart3, 
+  Settings2, 
+  Medal,
   MessageCircleQuestion,
-  ArrowRight,
-  Star
+  ShieldCheck,
+  ChevronRight,
+  TrendingUp,
+  Layout
 } from "lucide-react";
 
-export default function LandingPage() {
+export default function PollaFutboleraPremium() {
   return (
-    <div className="flex min-h-screen flex-col bg-[#050a06] font-sans text-white antialiased overflow-x-hidden">
+    <div className="flex min-h-screen flex-col bg-white font-sans text-slate-900 selection:bg-green-100 selection:text-green-900">
       {/* Header/Navbar */}
-      <header className="sticky top-0 z-50 w-full border-b border-white/10 bg-[#050a06]/80 backdrop-blur-xl">
-        <div className="container mx-auto flex h-16 md:h-20 items-center justify-between px-4 md:px-6">
-          <div className="flex items-center gap-2 md:gap-3">
-            <div className="flex h-8 w-8 md:h-10 md:w-10 items-center justify-center rounded-lg md:rounded-xl bg-gradient-to-br from-green-400 to-green-600 shadow-lg shadow-green-500/20">
-              <Trophy className="h-5 w-5 md:h-6 md:w-6 text-white" />
-            </div>
-            <span className="text-xl md:text-2xl font-black tracking-tighter uppercase italic">PredicFi</span>
+      <header className="sticky top-0 z-50 w-full border-b border-slate-100 bg-white/80 backdrop-blur-md">
+        <div className="container mx-auto flex h-16 items-center justify-between px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center gap-2 transition-transform hover:scale-105 cursor-pointer">
+            <Trophy className="h-6 w-6 text-green-600" />
+            <span className="text-xl font-bold tracking-tighter">PredicFi</span>
           </div>
-          <nav className="hidden md:flex items-center gap-8 text-sm font-medium text-white/60">
-            <Link href="#how-it-works" className="hover:text-green-400 transition-colors uppercase">Cómo funciona</Link>
-            <Link href="#testimonials" className="hover:text-green-400 transition-colors uppercase">Testimonios</Link>
-            <Link href="#faq" className="hover:text-green-400 transition-colors uppercase">FAQ</Link>
-          </nav>
-          <Link href="https://predicfi.site/pools">
-            <Button className="bg-green-500 hover:bg-green-400 text-black font-bold px-4 md:px-8 h-9 md:h-11 rounded-full shadow-lg shadow-green-500/20 transition-all hover:scale-105 active:scale-95 text-[10px] md:text-sm">
-              EMPEZAR AHORA
-            </Button>
-          </Link>
+          <div className="flex items-center gap-4">
+            <Link href="https://predicfi.site/vaults" className="hidden sm:block text-sm font-medium text-slate-600 hover:text-green-600 transition-colors">
+              Cómo funciona
+            </Link>
+            <Link href="https://predicfi.site/vaults">
+              <Button className="bg-green-600 font-bold text-white hover:bg-green-700 transition-all hover:scale-105 active:scale-95 shadow-md shadow-green-200">
+                MI POLLA
+              </Button>
+            </Link>
+          </div>
         </div>
       </header>
 
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="relative min-h-[80vh] md:min-h-[90vh] flex items-center justify-center overflow-hidden py-16 md:py-24">
-          {/* Background Image with Overlay */}
-          <div className="absolute inset-0 z-0">
-            <Image 
-              src="/hero.png" 
-              alt="World Cup Stadium" 
-              fill 
-              className="object-cover opacity-40 scale-105 animate-pulse-slow"
-              priority
-            />
-            <div className="absolute inset-0 bg-gradient-to-b from-[#050a06]/60 via-[#050a06]/80 to-[#050a06]"></div>
-          </div>
+        <section className="relative overflow-hidden pt-16 pb-20 lg:pt-32 lg:pb-40">
+          {/* Glassmorphism Blobs */}
+          <div className="absolute top-0 right-0 -z-10 h-[400px] w-[400px] bg-green-100/40 rounded-full blur-[100px] animate-pulse-slow"></div>
+          <div className="absolute bottom-0 left-0 -z-10 h-[300px] w-[300px] bg-blue-50/40 rounded-full blur-[80px]"></div>
 
-          <div className="container relative z-10 mx-auto px-6 text-center">
-            <div className="inline-flex items-center gap-2 rounded-full bg-green-500/10 border border-green-500/20 px-3 py-1.5 md:px-4 md:py-2 text-[10px] md:text-sm font-bold text-green-400 mb-6 md:mb-8 animate-in fade-in slide-in-from-bottom-4 duration-1000">
-              <span className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
-              </span>
-              +500 GRUPOS COMPITIENDO EN VIVO
-            </div>
-            
-            <h1 className="max-w-5xl mx-auto text-4xl md:text-8xl font-black tracking-tight leading-[0.9] mb-6 md:mb-8 uppercase italic animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-200">
-              EL GRAN <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-600">DESAFÍO</span> DE PRONÓSTICOS
-            </h1>
-            
-            <p className="mt-4 md:mt-6 max-w-2xl mx-auto text-base md:text-xl text-white/60 leading-relaxed mb-8 md:mb-12 animate-in fade-in slide-in-from-bottom-12 duration-1000 delay-300">
-              Vive el Mundial 2026 como nunca antes. Crea tu grupo, predice resultados y gana premios reales con la tecnología de predicción más avanzada del mercado.
-            </p>
-            
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 md:gap-6 animate-in fade-in slide-in-from-bottom-16 duration-1000 delay-500">
-              <Link href="https://predicfi.site/pools">
-                <Button size="lg" className="h-12 md:h-16 px-6 md:px-10 text-base md:text-xl font-black bg-green-500 text-black hover:bg-green-400 rounded-full shadow-2xl shadow-green-500/30 group transition-all">
-                  ENTRAR AL DESAFÍO OFICIAL
-                  <ArrowRight className="ml-2 h-5 w-5 md:h-6 md:w-6 group-hover:translate-x-1 transition-transform" />
-                </Button>
-              </Link>
-            </div>
-          </div>
-        </section>
-
-        {/* Stats/Proof Bar */}
-        <section className="border-y border-white/5 bg-white/[0.02] py-8 md:py-12">
-          <div className="container mx-auto px-6">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 text-center">
-              <div>
-                <p className="text-2xl md:text-4xl font-black text-white">$100K+</p>
-                <p className="text-[10px] md:text-sm text-white/40 uppercase tracking-widest font-bold mt-1 md:mt-2">PREMIOS REPARTIDOS</p>
+          <div className="container relative mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="flex flex-col items-center text-center">
+              <div className="inline-flex items-center rounded-full bg-green-50 px-4 py-1.5 text-sm font-semibold text-green-700 ring-1 ring-inset ring-green-600/20 mb-8 animate-bounce-subtle">
+                <TrendingUp className="mr-2 h-4 w-4" /> 
+                Más de 5,000 expertos ya están participando
               </div>
-              <div>
-                <p className="text-2xl md:text-4xl font-black text-white">50K+</p>
-                <p className="text-[10px] md:text-sm text-white/40 uppercase tracking-widest font-bold mt-1 md:mt-2">USUARIOS ACTIVOS</p>
-              </div>
-              <div>
-                <p className="text-2xl md:text-4xl font-black text-white">100%</p>
-                <p className="text-[10px] md:text-sm text-white/40 uppercase tracking-widest font-bold mt-1 md:mt-2">TRANSPARENCIA</p>
-              </div>
-              <div>
-                <p className="text-2xl md:text-4xl font-black text-white">24/7</p>
-                <p className="text-[10px] md:text-sm text-white/40 uppercase tracking-widest font-bold mt-1 md:mt-2">SOPORTE TÉCNICO</p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* How It Works */}
-        <section id="how-it-works" className="py-20 md:py-32 relative">
-          <div className="container mx-auto px-6">
-            <div className="flex flex-col md:flex-row items-end justify-between mb-12 md:mb-20 gap-8 text-center md:text-left">
-              <div className="max-w-2xl mx-auto md:mx-0">
-                <h2 className="text-3xl md:text-6xl font-black uppercase italic mb-4 md:mb-6">DOMINA LA <span className="text-green-500">CANCHA</span> DIGITAL</h2>
-                <p className="text-white/50 text-lg md:text-xl">Tres pasos simples para convertirte en el mejor pronosticador de tu comunidad.</p>
-              </div>
-              <div className="hidden md:block">
-                <div className="h-px w-64 bg-gradient-to-r from-transparent via-green-500/50 to-transparent"></div>
+              <h1 className="max-w-4xl text-5xl font-extrabold tracking-tighter text-slate-900 sm:text-7xl leading-[1.1]">
+                La Polla Futbolera Definitiva para el <span className="text-green-600">Mundial 2026</span>
+              </h1>
+              <p className="mt-8 max-w-2xl text-xl leading-8 text-slate-600">
+                Olvídate del Excel y los cálculos manuales. Únete a bóvedas públicas o crea grupos privados para tu oficina y amigos. <span className="font-semibold text-slate-900">Todo automatizado, todo en tiempo real.</span>
+              </p>
+              <div className="mt-12 flex flex-col items-center gap-6">
+                <Link href="https://predicfi.site/vaults">
+                  <Button size="lg" className="h-18 px-12 text-2xl font-black bg-green-600 text-white hover:bg-green-700 shadow-2xl shadow-green-200 transition-all hover:scale-105 active:scale-95 group">
+                    CREAR O UNIRSE A UNA POLLA
+                    <ChevronRight className="ml-2 h-6 w-6 transition-transform group-hover:translate-x-1" />
+                  </Button>
+                </Link>
+                <p className="text-sm font-medium text-slate-400 flex items-center gap-2">
+                  <ShieldCheck className="h-4 w-4" /> Sin instalaciones · 100% Seguro · Acceso Inmediato
+                </p>
               </div>
             </div>
 
-            <div className="grid gap-6 md:gap-8 md:grid-cols-3">
-              {[
-                {
-                  icon: Users,
-                  title: "ELIGE TU NIVEL",
-                  desc: "Desde ligas amateur hasta torneos profesionales. Tenemos una mesa para cada tipo de jugador.",
-                  step: "01"
-                },
-                {
-                  icon: Zap,
-                  title: "PRONOSTICA",
-                  desc: "Usa tus conocimientos de fútbol para predecir marcadores, goleadores y eventos especiales.",
-                  step: "02"
-                },
-                {
-                  icon: CheckCircle,
-                  title: "GANA REAL",
-                  desc: "Los premios se distribuyen automáticamente mediante smart contracts. Sin esperas, sin errores.",
-                  step: "03"
-                }
-              ].map((item, i) => (
-                <div key={i} className="group relative p-6 md:p-8 rounded-2xl md:rounded-3xl bg-white/[0.03] border border-white/5 hover:border-green-500/50 transition-all duration-500 overflow-hidden">
-                  <div className="absolute top-0 right-0 p-4 md:p-6 text-4xl md:text-6xl font-black text-white/[0.02] group-hover:text-green-500/5 transition-colors">
-                    {item.step}
-                  </div>
-                  <div className="relative z-10">
-                    <div className="mb-6 md:mb-8 inline-flex h-12 w-12 md:h-16 md:w-16 items-center justify-center rounded-xl md:rounded-2xl bg-green-500/10 text-green-500 group-hover:scale-110 transition-transform duration-500">
-                      <item.icon className="h-6 w-6 md:h-8 md:w-8" />
-                    </div>
-                    <h3 className="text-xl md:text-2xl font-black mb-3 md:mb-4 uppercase">{item.title}</h3>
-                    <p className="text-sm md:text-base text-white/40 leading-relaxed">{item.desc}</p>
-                  </div>
-                  <div className="absolute bottom-0 left-0 h-1 w-0 bg-green-500 transition-all duration-700 group-hover:w-full"></div>
+            {/* Platform Preview (Mockup Skeleton) */}
+            <div className="mt-20 relative mx-auto max-w-5xl rounded-2xl border border-slate-200 bg-white/50 p-2 shadow-2xl backdrop-blur-sm">
+              <div className="rounded-xl border border-slate-100 bg-white overflow-hidden shadow-inner">
+                <div className="h-8 bg-slate-50 border-b border-slate-100 flex items-center px-4 gap-1.5">
+                  <div className="w-2 h-2 rounded-full bg-red-300"></div>
+                  <div className="w-2 h-2 rounded-full bg-yellow-300"></div>
+                  <div className="w-2 h-2 rounded-full bg-green-300"></div>
+                  <div className="ml-4 h-3 w-32 bg-slate-200 rounded-full"></div>
                 </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Testimonials */}
-        <section id="testimonials" className="py-20 md:py-32 bg-gradient-to-b from-[#050a06] to-[#0a140c]">
-          <div className="container mx-auto px-6 text-center">
-            <div className="mb-12 md:mb-20">
-              <h2 className="text-3xl md:text-5xl font-black uppercase italic mb-4">VOCES DE LA COMUNIDAD</h2>
-              <div className="flex items-center justify-center gap-1 text-green-500 mb-8">
-                <Star className="fill-current h-4 w-4 md:h-5 md:w-5" />
-                <Star className="fill-current h-4 w-4 md:h-5 md:w-5" />
-                <Star className="fill-current h-4 w-4 md:h-5 md:w-5" />
-                <Star className="fill-current h-4 w-4 md:h-5 md:w-5" />
-                <Star className="fill-current h-4 w-4 md:h-5 md:w-5" />
-              </div>
-            </div>
-
-            <div className="grid gap-6 md:gap-8 md:grid-cols-2 max-w-5xl mx-auto">
-              {[
-                {
-                  name: "Juan R.",
-                  role: "Usuario Verificado",
-                  text: "Increíblemente fácil de usar. Mi grupo de amigos y yo nos divertimos mucho en el último torneo. La automatización lo hace todo más sencillo."
-                },
-                {
-                  name: "Maria G.",
-                  role: "Líder de Grupo",
-                  text: "La transparencia es total. Los premios se reparten al instante sin complicaciones. Es la plataforma que estábamos esperando para el mundial."
-                }
-              ].map((t, i) => (
-                <Card key={i} className="bg-white/[0.02] border-white/10 rounded-2xl md:rounded-3xl overflow-hidden backdrop-blur-sm text-left">
-                  <CardContent className="p-8 md:p-10">
-                    <p className="text-lg md:text-xl text-white/80 italic mb-6 md:mb-8 leading-relaxed">
-                      "{t.text}"
-                    </p>
-                    <div className="flex items-center gap-4">
-                      <div className="h-10 w-10 md:h-12 md:w-12 rounded-full bg-gradient-to-br from-green-500 to-emerald-700 flex items-center justify-center font-bold text-black text-sm md:text-base">
-                        {t.name[0]}
-                      </div>
-                      <div>
-                        <p className="font-black text-white uppercase tracking-tight text-sm md:text-base">{t.name}</p>
-                        <p className="text-[10px] md:text-xs text-white/40 font-bold uppercase tracking-widest">{t.role}</p>
-                      </div>
+                <div className="p-6 md:p-8">
+                  <div className="flex justify-between items-center mb-8">
+                    <div className="space-y-2">
+                      <div className="h-4 w-48 bg-slate-100 rounded"></div>
+                      <div className="h-8 w-64 bg-slate-200 rounded"></div>
                     </div>
-                  </CardContent>
-                </Card>
-              ))}
+                    <div className="hidden md:flex gap-4">
+                      <div className="h-10 w-24 bg-green-50 rounded-lg border border-green-100"></div>
+                      <div className="h-10 w-24 bg-slate-50 rounded-lg border border-slate-100"></div>
+                    </div>
+                  </div>
+                  <div className="space-y-4">
+                    {[1, 2, 3].map((i) => (
+                      <div key={i} className="flex items-center gap-4 p-4 rounded-xl border border-slate-50 bg-slate-50/30">
+                        <div className="w-10 h-10 rounded-full bg-slate-200 flex-shrink-0"></div>
+                        <div className="flex-1 space-y-2">
+                          <div className="h-3 w-1/3 bg-slate-200 rounded"></div>
+                          <div className="h-2 w-1/4 bg-slate-100 rounded"></div>
+                        </div>
+                        <div className="w-16 h-6 bg-green-100 rounded-full"></div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+              {/* Decorative Floating Icon */}
+              <div className="absolute -bottom-6 -right-6 md:-right-12 bg-white p-4 rounded-2xl shadow-xl border border-slate-100 animate-bounce-subtle">
+                <Layout className="h-8 w-8 text-green-600" />
+              </div>
             </div>
           </div>
         </section>
 
-        {/* FAQ */}
-        <section id="faq" className="py-20 md:py-32 bg-[#0a140c]">
-          <div className="container mx-auto px-6 max-w-4xl">
-            <div className="flex items-center gap-4 md:gap-6 mb-12 md:mb-16">
-              <div className="h-12 w-12 md:h-16 md:w-16 rounded-xl md:rounded-2xl bg-green-500/10 flex items-center justify-center">
-                <MessageCircleQuestion className="h-6 w-6 md:h-8 md:w-8 text-green-500" />
+        {/* Ventaja Competitiva */}
+        <section className="py-32 bg-slate-50/50">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid gap-12 md:grid-cols-2">
+              <Card className="border-none shadow-2xl bg-white overflow-hidden group transition-all hover:-translate-y-2">
+                <div className="h-2 bg-green-600 w-0 group-hover:w-full transition-all duration-500"></div>
+                <CardHeader className="p-8">
+                  <div className="mb-6 inline-flex h-16 w-16 items-center justify-center rounded-2xl bg-green-600 text-white shadow-lg shadow-green-200 rotate-3 group-hover:rotate-0 transition-transform">
+                    <Globe className="h-9 w-9" />
+                  </div>
+                  <CardTitle className="text-3xl tracking-tight">🌍 Compite contra Todos</CardTitle>
+                  <CardDescription className="text-lg pt-4 leading-relaxed">
+                    Únete a nuestras <span className="font-bold text-green-600 italic">Bóvedas Oficiales</span>. Elige tu nivel de entrada y demuestra que eres el mejor pronosticador del continente.
+                  </CardDescription>
+                </CardHeader>
+                <CardContent className="px-8 pb-8">
+                  <div className="space-y-4">
+                    {["Bóvedas por niveles (Bronce a Diamante)", "Posos acumulados garantizados", "Certificado de ranking global"].map((item, i) => (
+                      <div key={i} className="flex items-center gap-3 text-slate-600 font-medium">
+                        <div className="h-5 w-5 rounded-full bg-green-100 flex items-center justify-center">
+                          <Zap className="h-3 w-3 text-green-600" />
+                        </div>
+                        {item}
+                      </div>
+                    ))}
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card className="border-none shadow-2xl bg-white overflow-hidden group transition-all hover:-translate-y-2">
+                <div className="h-2 bg-slate-900 w-0 group-hover:w-full transition-all duration-500"></div>
+                <CardHeader className="p-8">
+                  <div className="mb-6 inline-flex h-16 w-16 items-center justify-center rounded-2xl bg-slate-900 text-white shadow-lg shadow-slate-200 -rotate-3 group-hover:rotate-0 transition-transform">
+                    <Lock className="h-9 w-9" />
+                  </div>
+                  <CardTitle className="text-3xl tracking-tight">🔒 Juega con tus Amigos</CardTitle>
+                  <CardDescription className="text-lg pt-4 leading-relaxed">
+                    El sistema perfecto para la <span className="font-bold text-slate-900 underline decoration-green-400 decoration-4">oficina y grupos privados</span>. Crea tu torneo, invita por WhatsApp y nosotros hacemos el resto.
+                  </CardDescription>
+                </CardHeader>
+                <CardContent className="px-8 pb-8">
+                  <div className="space-y-4">
+                    {["Panel de administración privado", "Invita con un clic vía WhatsApp", "Chat y notificaciones en tiempo real"].map((item, i) => (
+                      <div key={i} className="flex items-center gap-3 text-slate-600 font-medium">
+                        <div className="h-5 w-5 rounded-full bg-slate-100 flex items-center justify-center">
+                          <Zap className="h-3 w-3 text-slate-900" />
+                        </div>
+                        {item}
+                      </div>
+                    ))}
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </section>
+
+        {/* Beneficios Rápidos */}
+        <section className="py-32">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="mb-20 text-center">
+              <h2 className="text-4xl font-extrabold tracking-tighter text-slate-900 sm:text-5xl">Potencia tu experiencia mundialista</h2>
+            </div>
+            <div className="grid gap-16 md:grid-cols-3">
+              <div className="flex flex-col items-center text-center group">
+                <div className="mb-8 rounded-3xl bg-green-50 p-8 transition-all group-hover:bg-green-100 group-hover:scale-110 group-hover:rotate-3">
+                  <BarChart3 className="h-12 w-12 text-green-600" />
+                </div>
+                <h3 className="text-2xl font-bold mb-4 tracking-tight">📊 Tabla en Vivo</h3>
+                <p className="text-slate-600 text-lg">
+                  Nuestra plataforma se actualiza al segundo. Siente la adrenalina mientras ves tu posición cambiar con cada gol.
+                </p>
               </div>
-              <h2 className="text-2xl md:text-5xl font-black uppercase italic">DUDAS FRECUENTES</h2>
+
+              <div className="flex flex-col items-center text-center group">
+                <div className="mb-8 rounded-3xl bg-blue-50 p-8 transition-all group-hover:bg-blue-100 group-hover:scale-110 group-hover:-rotate-3">
+                  <Settings2 className="h-12 w-12 text-blue-600" />
+                </div>
+                <h3 className="text-2xl font-bold mb-4 tracking-tight">⚙️ Adiós a los Excels</h3>
+                <p className="text-slate-600 text-lg">
+                  Cero errores humanos. Nuestro motor de procesamiento calcula puntos y criterios de desempate automáticamente.
+                </p>
+              </div>
+
+              <div className="flex flex-col items-center text-center group">
+                <div className="mb-8 rounded-3xl bg-yellow-50 p-8 transition-all group-hover:bg-yellow-100 group-hover:scale-110 group-hover:rotate-3">
+                  <Medal className="h-12 w-12 text-yellow-600" />
+                </div>
+                <h3 className="text-2xl font-bold mb-4 tracking-tight">🏆 Reparto Garantizado</h3>
+                <p className="text-slate-600 text-lg">
+                  Sistema de distribución automático. Los mejores de la jornada reciben sus premios al instante, sin intermediarios.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* FAQ Rápido */}
+        <section className="bg-slate-900 py-32 text-white overflow-hidden relative">
+          <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_center,rgba(34,197,94,0.15),transparent)] pointer-events-none"></div>
+          <div className="container relative mx-auto px-4 sm:px-6 lg:px-8 max-w-3xl">
+            <div className="mb-16 flex items-center gap-4 justify-center">
+              <MessageCircleQuestion className="h-10 w-10 text-green-400" />
+              <h2 className="text-4xl font-bold tracking-tighter">Preguntas Frecuentes</h2>
             </div>
             <Accordion type="single" collapsible className="w-full space-y-4">
-              {[
-                {
-                  q: "¿CÓMO ME REGISTRO?",
-                  a: "Simplemente haz clic en el botón de entrar al desafío oficial, crea tu perfil y elige el nivel en el que deseas participar. Solo necesitas una wallet o un correo electrónico."
-                },
-                {
-                  q: "¿ES SEGURO PARTICIPAR?",
-                  a: "Absolutamente. Nuestro sistema automatizado garantiza transparencia total en cada paso, desde el registro de predicciones hasta el reparto de premios mediante smart contracts."
-                },
-                {
-                  q: "¿PUEDO JUGAR CON AMIGOS?",
-                  a: "¡Claro que sí! La plataforma está diseñada específicamente para potenciar la competencia entre grupos de amigos y comunidades locales o globales."
-                }
-              ].map((item, i) => (
-                <AccordionItem key={i} value={`item-${i}`} className="border-white/5 bg-white/[0.01] rounded-xl md:rounded-2xl px-4 md:px-6">
-                  <AccordionTrigger className="text-base md:text-lg font-bold hover:text-green-400 py-4 md:py-6 uppercase tracking-tight text-left">
-                    {item.q}
-                  </AccordionTrigger>
-                  <AccordionContent className="text-white/50 text-sm md:text-lg leading-relaxed pb-4 md:pb-6">
-                    {item.a}
-                  </AccordionContent>
-                </AccordionItem>
-              ))}
+              <AccordionItem value="item-1" className="border-slate-800 bg-slate-800/50 rounded-2xl px-6">
+                <AccordionTrigger className="text-left font-bold text-lg hover:no-underline py-6">¿Cómo aseguran la transparencia?</AccordionTrigger>
+                <AccordionContent className="text-slate-300 text-base pb-6">
+                  Cada pronóstico se registra con marca de tiempo inmutable. Nadie, ni siquiera los administradores, puede modificar una predicción una vez iniciado el partido.
+                </AccordionContent>
+              </AccordionItem>
+              <AccordionItem value="item-2" className="border-slate-800 bg-slate-800/50 rounded-2xl px-6">
+                <AccordionTrigger className="text-left font-bold text-lg hover:no-underline py-6">¿Es gratis crear grupos privados?</AccordionTrigger>
+                <AccordionContent className="text-slate-300 text-base pb-6">
+                  Sí, puedes crear grupos para tus amigos sin costo base. Solo se aplican niveles de entrada según el tipo de bóveda que elijan participar.
+                </AccordionContent>
+              </AccordionItem>
+              <AccordionItem value="item-3" className="border-slate-800 bg-slate-800/50 rounded-2xl px-6">
+                <AccordionTrigger className="text-left font-bold text-lg hover:no-underline py-6">¿Qué pasa si olvido poner mi resultado?</AccordionTrigger>
+                <AccordionContent className="text-slate-300 text-base pb-6">
+                  El sistema envía recordatorios automáticos 1 hora antes de cada partido para asegurar que nadie se quede sin sumar puntos.
+                </AccordionContent>
+              </AccordionItem>
             </Accordion>
           </div>
         </section>
 
         {/* Final CTA */}
-        <section className="relative py-24 md:py-40 overflow-hidden text-center">
-          <div className="absolute inset-0 bg-green-500"></div>
-          <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-20"></div>
-          
-          <div className="container relative z-10 mx-auto px-6">
-            <h2 className="text-3xl md:text-8xl font-black text-black uppercase italic mb-6 md:mb-8 leading-none">
-              ¿LISTO PARA HACER <span className="text-white">HISTORIA</span>?
-            </h2>
-            <p className="text-black/70 mb-8 md:mb-12 max-w-2xl mx-auto text-lg md:text-2xl font-bold">
-              Únete a la revolución de los pronósticos deportivos. El Mundial 2026 te espera.
-            </p>
-            <Link href="https://predicfi.site/pools">
-              <Button size="lg" className="h-14 md:h-20 px-8 md:px-12 text-lg md:text-2xl font-black bg-black text-white hover:bg-zinc-900 rounded-full shadow-2xl transition-all hover:scale-105 active:scale-95">
-                COMENZAR DESAFÍO
-              </Button>
-            </Link>
+        <section className="py-32 bg-white relative">
+          <div className="container mx-auto px-4 text-center">
+            <div className="max-w-4xl mx-auto rounded-[3rem] bg-green-600 p-12 md:p-24 text-white shadow-3xl relative overflow-hidden">
+              <div className="absolute top-0 right-0 -translate-y-1/2 translate-x-1/2 w-64 h-64 bg-white/10 rounded-full blur-3xl"></div>
+              <div className="relative z-10">
+                <h2 className="text-4xl font-black sm:text-6xl mb-8 tracking-tighter">¿Estás listo para el Desafío?</h2>
+                <p className="text-green-50 mb-12 max-w-2xl mx-auto text-xl font-medium opacity-90">
+                  Únete a la comunidad de pollas más grande del mundo. Asegura tu lugar antes de que comience el partido inaugural.
+                </p>
+                <Link href="https://predicfi.site/vaults">
+                  <Button size="lg" className="h-20 px-16 text-2xl font-black bg-white text-green-700 hover:bg-slate-100 shadow-2xl transition-all hover:scale-105 active:scale-95">
+                    ENTRAR AL DESAFÍO OFICIAL
+                  </Button>
+                </Link>
+              </div>
+            </div>
           </div>
         </section>
       </main>
 
       {/* Footer */}
-      <footer className="bg-[#050a06] border-t border-white/5 py-16 md:py-20">
-        <div className="container mx-auto px-6">
-          <div className="flex flex-col md:flex-row justify-between items-start gap-12">
-            <div className="max-w-xs">
-              <div className="flex items-center gap-2 md:gap-3 mb-4 md:mb-6">
-                <Trophy className="h-6 w-6 md:h-8 md:w-8 text-green-500" />
-                <span className="text-xl md:text-2xl font-black uppercase italic tracking-tighter">PredicFi</span>
+      <footer className="bg-slate-50 border-t border-slate-100 py-20">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row justify-between items-start gap-12 text-sm text-slate-500">
+            <div className="max-w-xs space-y-4">
+              <div className="flex items-center gap-2">
+                <Trophy className="h-6 w-6 text-green-600" />
+                <span className="font-bold text-xl text-slate-900 tracking-tighter">PredicFi</span>
               </div>
-              <p className="text-sm md:text-base text-white/40 leading-relaxed">
-                La plataforma de predicción definitiva para el Mundial 2026. Transparencia, velocidad y diversión garantizada.
-              </p>
+              <p>La plataforma definitiva para organizar y participar en quinielas de fútbol de manera profesional y automatizada.</p>
             </div>
-            
-            <div className="grid grid-cols-2 gap-12 md:gap-16">
-              <div>
-                <h4 className="text-xs md:text-sm font-black uppercase tracking-widest text-white mb-4 md:mb-6">LINKS</h4>
-                <ul className="space-y-3 md:space-y-4 text-[10px] md:text-sm text-white/40 font-medium">
-                  <li><Link href="#how-it-works" className="hover:text-white transition-colors">Cómo funciona</Link></li>
-                  <li><Link href="#testimonials" className="hover:text-white transition-colors">Testimonios</Link></li>
-                  <li><Link href="#faq" className="hover:text-white transition-colors">FAQ</Link></li>
+            <div className="grid grid-cols-2 gap-16 md:gap-24">
+              <div className="space-y-4">
+                <h4 className="font-bold text-slate-900 uppercase tracking-widest text-xs">Producto</h4>
+                <ul className="space-y-2">
+                  <li><Link href="#" className="hover:text-green-600">Bóvedas</Link></li>
+                  <li><Link href="#" className="hover:text-green-600">Premios</Link></li>
+                  <li><Link href="#" className="hover:text-green-600">Ranking</Link></li>
                 </ul>
               </div>
-              <div>
-                <h4 className="text-xs md:text-sm font-black uppercase tracking-widest text-white mb-4 md:mb-6">LEGAL</h4>
-                <ul className="space-y-3 md:space-y-4 text-[10px] md:text-sm text-white/40 font-medium">
-                  <li><Link href="#" className="hover:text-white transition-colors">Términos</Link></li>
-                  <li><Link href="#" className="hover:text-white transition-colors">Privacidad</Link></li>
+              <div className="space-y-4">
+                <h4 className="font-bold text-slate-900 uppercase tracking-widest text-xs">Soporte</h4>
+                <ul className="space-y-2">
+                  <li><Link href="#" className="hover:text-green-600">Ayuda</Link></li>
+                  <li><Link href="#" className="hover:text-green-600">Reglas</Link></li>
+                  <li><Link href="#" className="hover:text-green-600">Contacto</Link></li>
                 </ul>
               </div>
             </div>
           </div>
-          
-          <div className="mt-16 md:mt-20 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6">
-            <p className="text-white/20 text-[10px] md:text-sm font-bold uppercase tracking-widest text-center md:text-left">
-              © 2026 PREDICFI DESAFÍO MUNDIAL. ALL RIGHTS RESERVED.
-            </p>
-            <div className="flex items-center gap-4 md:gap-6">
-              <ShieldCheck className="h-4 w-4 md:h-5 md:w-5 text-green-500/40" />
-              <span className="text-[10px] md:text-xs text-white/20 font-black uppercase tracking-widest">SECURED BY BLOCKCHAIN</span>
+          <div className="mt-20 pt-8 border-t border-slate-200 flex flex-col md:flex-row justify-between items-center gap-4 text-xs">
+            <p>© 2026 PredicFi Global. Todos los derechos reservados.</p>
+            <div className="flex items-center gap-6">
+              <div className="flex items-center gap-2">
+                <ShieldCheck className="h-4 w-4 text-green-600" />
+                <span className="font-medium text-slate-900 uppercase tracking-tighter">Sistema Auditado</span>
+              </div>
+              <Link href="#" className="hover:text-slate-900">Privacidad</Link>
+              <Link href="#" className="hover:text-slate-900">Términos</Link>
             </div>
           </div>
         </div>
