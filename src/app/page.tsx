@@ -39,7 +39,7 @@ export default function LandingPage() {
             <Link href="#testimonials" className="hover:text-green-400 transition-colors uppercase">Testimonios</Link>
             <Link href="#faq" className="hover:text-green-400 transition-colors uppercase">FAQ</Link>
           </nav>
-          <Link href="https://predicfi.site/">
+          <Link href="https://predicfi.site/pools">
             <Button className="bg-green-500 hover:bg-green-400 text-black font-bold px-4 md:px-8 h-9 md:h-11 rounded-full shadow-lg shadow-green-500/20 transition-all hover:scale-105 active:scale-95 text-[10px] md:text-sm">
               EMPEZAR AHORA
             </Button>
@@ -80,7 +80,7 @@ export default function LandingPage() {
             </p>
             
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 md:gap-6 animate-in fade-in slide-in-from-bottom-16 duration-1000 delay-500">
-              <Link href="https://predicfi.site/">
+              <Link href="https://predicfi.site/pools">
                 <Button size="lg" className="h-12 md:h-16 px-6 md:px-10 text-base md:text-xl font-black bg-green-500 text-black hover:bg-green-400 rounded-full shadow-2xl shadow-green-500/30 group transition-all">
                   ENTRAR AL DESAFÍO OFICIAL
                   <ArrowRight className="ml-2 h-5 w-5 md:h-6 md:w-6 group-hover:translate-x-1 transition-transform" />
@@ -263,7 +263,7 @@ export default function LandingPage() {
             <p className="text-black/70 mb-8 md:mb-12 max-w-2xl mx-auto text-lg md:text-2xl font-bold">
               Únete a la revolución de los pronósticos deportivos. El Mundial 2026 te espera.
             </p>
-            <Link href="https://predicfi.site/">
+            <Link href="https://predicfi.site/pools">
               <Button size="lg" className="h-14 md:h-20 px-8 md:px-12 text-lg md:text-2xl font-black bg-black text-white hover:bg-zinc-900 rounded-full shadow-2xl transition-all hover:scale-105 active:scale-95">
                 COMENZAR DESAFÍO
               </Button>
