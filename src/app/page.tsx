@@ -83,37 +83,66 @@ export default function PollaFutboleraPremium() {
               </div>
             </div>
 
-            {/* Platform Preview (Mockup Skeleton) */}
+            {/* Platform Preview (Improved Dashboard Preview) */}
             <div className="mt-20 relative mx-auto max-w-5xl rounded-2xl border border-slate-200 bg-white/50 p-2 shadow-2xl backdrop-blur-sm">
               <div className="rounded-xl border border-slate-100 bg-white overflow-hidden shadow-inner">
-                <div className="h-8 bg-slate-50 border-b border-slate-100 flex items-center px-4 gap-1.5">
-                  <div className="w-2 h-2 rounded-full bg-red-300"></div>
-                  <div className="w-2 h-2 rounded-full bg-yellow-300"></div>
-                  <div className="w-2 h-2 rounded-full bg-green-300"></div>
-                  <div className="ml-4 h-3 w-32 bg-slate-200 rounded-full"></div>
+                {/* Browser Header */}
+                <div className="h-10 bg-slate-50 border-b border-slate-100 flex items-center px-4 gap-1.5">
+                  <div className="w-3 h-3 rounded-full bg-red-400"></div>
+                  <div className="w-3 h-3 rounded-full bg-yellow-400"></div>
+                  <div className="w-3 h-3 rounded-full bg-green-400"></div>
+                  <div className="ml-4 h-5 w-64 bg-white border border-slate-200 rounded-md flex items-center px-2">
+                    <div className="h-2 w-32 bg-slate-100 rounded-full"></div>
+                  </div>
                 </div>
-                <div className="p-6 md:p-8">
-                  <div className="flex justify-between items-center mb-8">
-                    <div className="space-y-2">
-                      <div className="h-4 w-48 bg-slate-100 rounded"></div>
-                      <div className="h-8 w-64 bg-slate-200 rounded"></div>
-                    </div>
-                    <div className="hidden md:flex gap-4">
-                      <div className="h-10 w-24 bg-green-50 rounded-lg border border-green-100"></div>
-                      <div className="h-10 w-24 bg-slate-50 rounded-lg border border-slate-100"></div>
+                
+                <div className="p-0 md:flex">
+                  {/* Sidebar Mockup (hidden on mobile) */}
+                  <div className="hidden md:block w-48 border-r border-slate-100 bg-slate-50/50 p-4 space-y-4">
+                    <div className="h-8 bg-green-100 rounded-lg border border-green-200"></div>
+                    <div className="space-y-2 pt-4">
+                      {[1, 2, 3, 4].map((i) => (
+                        <div key={i} className="h-4 w-full bg-slate-200/50 rounded"></div>
+                      ))}
                     </div>
                   </div>
-                  <div className="space-y-4">
-                    {[1, 2, 3].map((i) => (
-                      <div key={i} className="flex items-center gap-4 p-4 rounded-xl border border-slate-50 bg-slate-50/30">
-                        <div className="w-10 h-10 rounded-full bg-slate-200 flex-shrink-0"></div>
-                        <div className="flex-1 space-y-2">
-                          <div className="h-3 w-1/3 bg-slate-200 rounded"></div>
-                          <div className="h-2 w-1/4 bg-slate-100 rounded"></div>
-                        </div>
-                        <div className="w-16 h-6 bg-green-100 rounded-full"></div>
+
+                  {/* Main Content: Leaderboard */}
+                  <div className="flex-1 p-6 md:p-8">
+                    <div className="flex justify-between items-end mb-8">
+                      <div>
+                        <h4 className="text-xs font-bold text-green-600 uppercase tracking-widest mb-1">Ranking en Vivo</h4>
+                        <h3 className="text-2xl font-bold text-slate-900">Bóveda Diamante #2026</h3>
                       </div>
-                    ))}
+                      <div className="flex gap-2">
+                        <div className="h-9 px-4 bg-slate-900 text-white text-xs font-bold rounded-lg flex items-center">PARTICIPAR</div>
+                      </div>
+                    </div>
+
+                    <div className="space-y-3">
+                      {[
+                        { pos: "1", name: "Carlos " + String.fromCharCode(160) + " Rodriguez", pts: "142 pts", trend: "up", color: "bg-yellow-100 text-yellow-700", medal: "🥇" },
+                        { pos: "2", name: "Ana Maria Silva", pts: "138 pts", trend: "up", color: "bg-slate-100 text-slate-700", medal: "🥈" },
+                        { pos: "3", name: "Juan Pablo Duarte", pts: "135 pts", trend: "down", color: "bg-orange-50 text-orange-700", medal: "🥉" },
+                        { pos: "4", name: "Sofia Mendez", pts: "129 pts", trend: "up", color: "bg-slate-50 text-slate-500", medal: "4" },
+                      ].map((player, i) => (
+                        <div key={i} className="flex items-center gap-4 p-4 rounded-xl border border-slate-100 bg-white shadow-sm hover:border-green-200 transition-colors">
+                          <div className={`w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm ${player.color}`}>
+                            {player.medal}
+                          </div>
+                          <div className="flex-1">
+                            <div className="font-bold text-slate-900">{player.name}</div>
+                            <div className="text-xs text-slate-400">Hace 2 minutos</div>
+                          </div>
+                          <div className="text-right">
+                            <div className="font-black text-slate-900">{player.pts}</div>
+                            <div className={`text-[10px] font-bold ${player.trend === 'up' ? 'text-green-500' : 'text-red-400'}`}>
+                              {player.trend === 'up' ? '▲ +12' : '▼ -2'}
+                            </div>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
                   </div>
                 </div>
               </div>
