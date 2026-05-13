@@ -53,24 +53,24 @@ export default function PollaFutboleraPremium() {
 
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="relative overflow-hidden pt-16 pb-20 lg:pt-32 lg:pb-40">
+        <section className="relative overflow-hidden pt-8 pb-20 lg:pt-20 lg:pb-40">
           {/* Glassmorphism Blobs */}
           <div className="absolute top-0 right-0 -z-10 h-[400px] w-[400px] bg-green-100/40 rounded-full blur-[100px] animate-pulse-slow"></div>
           <div className="absolute bottom-0 left-0 -z-10 h-[300px] w-[300px] bg-blue-50/40 rounded-full blur-[80px]"></div>
 
           <div className="container relative mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex flex-col items-center text-center">
-              <div className="inline-flex items-center rounded-full bg-green-50 px-4 py-1.5 text-sm font-semibold text-green-700 ring-1 ring-inset ring-green-600/20 mb-8 animate-bounce-subtle">
+              <div className="inline-flex items-center rounded-full bg-green-50 px-4 py-1.5 text-sm font-semibold text-green-700 ring-1 ring-inset ring-green-600/20 mb-6 animate-bounce-subtle">
                 <TrendingUp className="mr-2 h-4 w-4" /> 
                 Más de 5,000 expertos ya están participando
               </div>
               <h1 className="max-w-4xl text-5xl font-extrabold tracking-tighter text-slate-900 sm:text-7xl leading-[1.1]">
                 La Polla Futbolera Definitiva para el <span className="text-green-600">Mundial 2026</span>
               </h1>
-              <p className="mt-8 max-w-2xl text-xl leading-8 text-slate-600">
+              <p className="mt-6 max-w-2xl text-xl leading-8 text-slate-600">
                 Olvídate del Excel y los cálculos manuales. Únete a bóvedas públicas o crea grupos privados para tu oficina y amigos. <span className="font-semibold text-slate-900">Todo automatizado, todo en tiempo real.</span>
               </p>
-              <div className="mt-12 flex flex-col items-center gap-6">
+              <div className="mt-8 flex flex-col items-center gap-6">
                 <Link href="https://predicfi.site/pools">
                   <Button size="lg" className="h-18 px-12 text-2xl font-black bg-green-600 text-white hover:bg-green-700 shadow-2xl shadow-green-200 transition-all hover:scale-105 active:scale-95 group">
                     CREAR O UNIRSE A UNA POLLA
