@@ -14,11 +14,30 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Desafío Mundial 2026 | PredicFi - El Gran Torneo de Pronósticos",
-  description: "Participa en el Desafío Mundial 2026 con PredicFi. Crea tu grupo, predice los resultados y gana premios reales. El sistema de pronósticos más transparente.",
-  metadataBase: new URL("https://desafiomundial2026.website"),
-  alternates: {
-    canonical: "/",
+  title: "PredicFi | Pollas Futboleras del Mundial 2026",
+  description: "Sistema 100% automatizado en la red Base para organizar tus quinielas deportivas. Cero cálculos manuales, posiciones en tiempo real.",
+  metadataBase: new URL("https://predicfi.site"),
+  openGraph: {
+    title: "PredicFi | Pollas Futboleras del Mundial 2026",
+    description: "Únete a las pools públicas o arma tu grupo privado. Posiciones en tiempo real y cero trabajo manual.",
+    url: "https://predicfi.site",
+    siteName: "PredicFi",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "PredicFi Mundial 2026 Preview",
+      },
+    ],
+    locale: "es_ES",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "PredicFi | Pollas Futboleras del Mundial 2026",
+    description: "Únete a las pools públicas o arma tu grupo privado. Posiciones en tiempo real y cero trabajo manual.",
+    images: ["/og-image.jpg"],
   },
 };
 

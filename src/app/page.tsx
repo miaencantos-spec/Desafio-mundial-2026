@@ -39,10 +39,10 @@ export default function PollaFutboleraPremium() {
             <span className="text-xl font-bold tracking-tighter">PredicFi</span>
           </div>
           <div className="flex items-center gap-4">
-            <Link href="https://predicfi.site/vaults" className="hidden sm:block text-sm font-medium text-slate-600 hover:text-green-600 transition-colors">
+            <Link href="https://predicfi.site/pools" className="hidden sm:block text-sm font-medium text-slate-600 hover:text-green-600 transition-colors">
               Cómo funciona
             </Link>
-            <Link href="https://predicfi.site/vaults">
+            <Link href="https://predicfi.site/pools">
               <Button className="bg-green-600 font-bold text-white hover:bg-green-700 transition-all hover:scale-105 active:scale-95 shadow-md shadow-green-200">
                 MI POLLA
               </Button>
@@ -71,7 +71,7 @@ export default function PollaFutboleraPremium() {
                 Olvídate del Excel y los cálculos manuales. Únete a bóvedas públicas o crea grupos privados para tu oficina y amigos. <span className="font-semibold text-slate-900">Todo automatizado, todo en tiempo real.</span>
               </p>
               <div className="mt-12 flex flex-col items-center gap-6">
-                <Link href="https://predicfi.site/vaults">
+                <Link href="https://predicfi.site/pools">
                   <Button size="lg" className="h-18 px-12 text-2xl font-black bg-green-600 text-white hover:bg-green-700 shadow-2xl shadow-green-200 transition-all hover:scale-105 active:scale-95 group">
                     CREAR O UNIRSE A UNA POLLA
                     <ChevronRight className="ml-2 h-6 w-6 transition-transform group-hover:translate-x-1" />
@@ -263,7 +263,7 @@ export default function PollaFutboleraPremium() {
                 <p className="text-green-50 mb-12 max-w-2xl mx-auto text-xl font-medium opacity-90">
                   Únete a la comunidad de pollas más grande del mundo. Asegura tu lugar antes de que comience el partido inaugural.
                 </p>
-                <Link href="https://predicfi.site/vaults">
+                <Link href="https://predicfi.site/pools">
                   <Button size="lg" className="h-20 px-16 text-2xl font-black bg-white text-green-700 hover:bg-slate-100 shadow-2xl transition-all hover:scale-105 active:scale-95">
                     ENTRAR AL DESAFÍO OFICIAL
                   </Button>
@@ -289,7 +289,7 @@ export default function PollaFutboleraPremium() {
               <div className="space-y-4">
                 <h4 className="font-bold text-slate-900 uppercase tracking-widest text-xs">Producto</h4>
                 <ul className="space-y-2">
-                  <li><Link href="#" className="hover:text-green-600">Bóvedas</Link></li>
+                  <li><Link href="https://predicfi.site/pools" className="hover:text-green-600">Bóvedas</Link></li>
                   <li><Link href="#" className="hover:text-green-600">Premios</Link></li>
                   <li><Link href="#" className="hover:text-green-600">Ranking</Link></li>
                 </ul>

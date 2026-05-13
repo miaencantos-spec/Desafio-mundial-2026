@@ -36,8 +36,7 @@ Esta es una Bridge Page (Landing Page de aterrizaje) diseñada para captar tráf
 
 ## 🔗 Enlaces Oficiales
 
-Todos los botones de acción (CTA) redirigen a la plataforma principal:
-`https://predicfi.site/vaults`
+Botones de acción vinculados a `https://predicfi.site/pools`
 
 ---
 © 2026 PredicFi Global. Sistema de Quinielas Futboleras Automatizado.
