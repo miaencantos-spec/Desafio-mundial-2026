@@ -64,17 +64,17 @@ export default function PollaFutboleraPremium() {
                 <TrendingUp className="mr-2 h-4 w-4" /> 
                 Más de 5,000 expertos ya están participando
               </div>
-              <h1 className="max-w-4xl text-5xl font-extrabold tracking-tighter text-slate-900 sm:text-7xl leading-[1.1]">
+              <h1 className="max-w-4xl text-3xl font-extrabold tracking-tighter text-slate-900 sm:text-7xl leading-[1.1]">
                 La Polla Futbolera Definitiva para el <span className="text-green-600">Mundial 2026</span>
               </h1>
               <p className="mt-6 max-w-2xl text-xl leading-8 text-slate-600">
                 Olvídate del Excel y los cálculos manuales. Únete a bóvedas públicas o crea grupos privados para tu oficina y amigos. <span className="font-semibold text-slate-900">Todo automatizado, todo en tiempo real.</span>
               </p>
               <div className="mt-8 flex flex-col items-center gap-6">
-                <Link href="https://predicfi.site/pools">
-                  <Button size="lg" className="h-18 px-12 text-2xl font-black bg-green-600 text-white hover:bg-green-700 shadow-2xl shadow-green-200 transition-all hover:scale-105 active:scale-95 group">
+                <Link href="https://predicfi.site/pools" className="w-full sm:w-auto px-4 sm:px-0">
+                  <Button size="lg" className="w-full sm:w-auto h-16 sm:h-18 px-6 sm:px-12 text-lg sm:text-2xl font-black bg-green-600 text-white hover:bg-green-700 shadow-2xl shadow-green-200 transition-all hover:scale-105 active:scale-95 group">
                     CREAR O UNIRSE A UNA POLLA
-                    <ChevronRight className="ml-2 h-6 w-6 transition-transform group-hover:translate-x-1" />
+                    <ChevronRight className="ml-2 h-5 w-5 sm:h-6 sm:w-6 transition-transform group-hover:translate-x-1" />
                   </Button>
                 </Link>
                 <p className="text-sm font-medium text-slate-400 flex items-center gap-2">
@@ -285,18 +285,20 @@ export default function PollaFutboleraPremium() {
         {/* Final CTA */}
         <section className="py-32 bg-white relative">
           <div className="container mx-auto px-4 text-center">
-            <div className="max-w-4xl mx-auto rounded-[3rem] bg-green-600 p-12 md:p-24 text-white shadow-3xl relative overflow-hidden">
+            <div className="max-w-4xl mx-auto rounded-[2rem] sm:rounded-[3rem] bg-green-600 p-6 sm:p-12 md:p-24 text-white shadow-3xl relative overflow-hidden box-border w-full">
               <div className="absolute top-0 right-0 -translate-y-1/2 translate-x-1/2 w-64 h-64 bg-white/10 rounded-full blur-3xl"></div>
               <div className="relative z-10">
                 <h2 className="text-4xl font-black sm:text-6xl mb-8 tracking-tighter">¿Estás listo para el Desafío?</h2>
                 <p className="text-green-50 mb-12 max-w-2xl mx-auto text-xl font-medium opacity-90">
                   Únete a la comunidad de pollas más grande del mundo. Asegura tu lugar antes de que comience el partido inaugural.
                 </p>
-                <Link href="https://predicfi.site/pools">
-                  <Button size="lg" className="h-20 px-16 text-2xl font-black bg-white text-green-700 hover:bg-slate-100 shadow-2xl transition-all hover:scale-105 active:scale-95">
-                    ENTRAR AL DESAFÍO OFICIAL
-                  </Button>
-                </Link>
+                <div className="flex justify-center w-full">
+                  <Link href="https://predicfi.site/pools" className="w-full sm:w-auto">
+                    <Button size="lg" className="w-full sm:w-auto h-16 sm:h-20 px-6 sm:px-16 text-lg sm:text-2xl font-black bg-white text-green-700 hover:bg-slate-100 shadow-2xl transition-all hover:scale-105 active:scale-95 mx-auto block rounded-xl">
+                      ENTRAR AL DESAFÍO OFICIAL
+                    </Button>
+                  </Link>
+                </div>
               </div>
             </div>
           </div>
@@ -346,6 +348,17 @@ export default function PollaFutboleraPremium() {
           </div>
         </div>
       </footer>
+
+      {/* Sticky Mobile Button */}
+      <div className="fixed bottom-0 left-0 right-0 z-[60] px-4 md:hidden pointer-events-none">
+        <div className="mb-5 pointer-events-auto">
+          <Link href="https://predicfi.site/pools">
+            <Button className="w-full h-16 text-lg font-black bg-green-600 text-white rounded-xl shadow-2xl border-2 border-white/20">
+              CREAR O UNIRSE A UNA POLLA
+            </Button>
+          </Link>
+        </div>
+      </div>
     </div>
   );
 }
